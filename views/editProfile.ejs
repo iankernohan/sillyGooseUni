@@ -1,0 +1,61 @@
+<% layout('boilerplate') %>
+    <main class="container container-fluid">
+        <h1 class="text-center mb-4">Profile</h1>
+        <form action="/editProfile/<%= currentUser._id %>?_method=PUT" method="POST" class="d-inline">
+
+            <div class="mb-5 row">
+                <label for="username" class="col-sm-2 col-form-label">Username</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="username" name="username"
+                        value="<%= currentUser.username %>">
+                </div>
+            </div>
+            <div class="mb-5 row">
+                <label for="firstName" class="col-sm-2 col-form-label">First name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="firstName" name="firstName"
+                        value="<%= currentUser.firstName %>">
+                </div>
+            </div>
+            <div class="mb-5 row">
+                <label for="lastName" class="col-sm-2 col-form-label">Last name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="lastName" name="lastName"
+                        value="<%= currentUser.lastName %>">
+                </div>
+            </div>
+            <div class="mb-5 row">
+                <label for="age" class="col-sm-2 col-form-label">Age</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="age" name="age" value="<%= currentUser.age %>">
+                </div>
+            </div>
+            <div class="mb-5 row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="email" name="email" value="<%= currentUser.email %>">
+                </div>
+            </div>
+            <div class="mb-5 row">
+                <label for="major" class="col-sm-2 col-form-label">Major</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="major" name="major" value="<%= currentUser.major %>">
+                </div>
+            </div>
+            <div class="mb-5 row">
+                <label for="minor" class="col-sm-2 col-form-label">Minor</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="minor" name="minor" value="<%= currentUser.minor %>">
+                </div>
+            </div>
+            <div class="mb-5 row">
+                <label for="profilePicture" class="col-sm-2 col-form-label">Profile picture</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="profilePicture" name="profilePicture"
+                        value="<%= currentUser.profilePicture %>">
+                </div>
+            </div>
+
+            <button class="btn btn-success">Save</button>
+        </form>
+    </main>

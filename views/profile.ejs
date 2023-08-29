@@ -1,0 +1,58 @@
+<% layout('boilerplate') %>
+    <main class="container container-fluid">
+        <div class="text-center my-5">
+            <img src="<%= currentUser.profilePicture %>" id="profilePicture" class="img-fluid">
+        </div>
+
+        <hr class="mb-5">
+
+        <div class=" mb-5 row">
+            <label for="username" class="col-sm-2 col-form-label">Username</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" readonly id="username"
+                    value="<%= currentUser.username %>">
+            </div>
+        </div>
+        <div class="mb-5 row">
+            <label for="firstname" class="col-sm-2 col-form-label">First name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" readonly id="firstname"
+                    value="<%= currentUser.firstName %>">
+            </div>
+        </div>
+        <div class="mb-5 row">
+            <label for="lasttname" class="col-sm-2 col-form-label">Last name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" readonly id="lastname"
+                    value="<%= currentUser.lastName %>">
+            </div>
+        </div>
+        <div class="mb-5 row">
+            <label for="age" class="col-sm-2 col-form-label">Age</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" readonly id="age" value="<%= currentUser.age %>">
+            </div>
+        </div>
+        <div class="mb-5 row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" readonly id="email" value="<%= currentUser.email %>">
+            </div>
+        </div>
+        <div class="mb-5 row">
+            <label for="major" class="col-sm-2 col-form-label">Major</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" readonly id="major" value="<%= currentUser.major %>">
+            </div>
+        </div>
+        <div class="mb-5 row">
+            <label for="minor" class="col-sm-2 col-form-label">Minor</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" readonly id="Minor" value="<%= currentUser.minor %>">
+            </div>
+        </div>
+
+        <hr class="mt-5">
+
+        <a href="/editProfile/<%= currentUser._id %>" class="btn btn-warning">Edit</a>
+    </main>

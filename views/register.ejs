@@ -1,0 +1,21 @@
+<% layout('boilerplate') %>
+
+    <main class="container mt-3">
+        <form action="/register" method="POST">
+            <h1>Register</h1>
+            <div class="mb-2">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+            </div>
+            <div class="mb-2">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="mb-2">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password"
+                    required>
+            </div>
+            <button class="btn btn-success">Register</button>
+        </form>
+    </main>
